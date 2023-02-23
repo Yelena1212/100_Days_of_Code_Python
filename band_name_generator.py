@@ -9,3 +9,5 @@ band_name = city + " " + pet_name
 #5. Make sure the input cursor shows on a new line:
 print("\nYour band name could be " + band_name)
 # Solution: https://replit.com/@appbrewery/band-name-generator-end
+
+
