@@ -11,6 +11,8 @@
 #     elif age <= 18:
 #         bill = 7
 #         print("Youth ticket price is $7")
+#     elif 45 <= age <= 55:
+#         print("Have a free ride with us!")
 #     else:
 #         bill = 12
 #         print("Adult ticket price is $12")
@@ -89,28 +91,109 @@
 #     print(f"{year} is Not Leap year")
 
 # 🚨 Don't change the code below 👇
-print("Welcome to Python Pizza Deliveries!")
-size = input("What size pizza do you want? S, M, or L ")
-add_pepperoni = input("Do you want pepperoni? Y or N ")
-extra_cheese = input("Do you want extra cheese? Y or N ")
+# print("Welcome to Python Pizza Deliveries!")
+# size = input("What size pizza do you want? S, M, or L ")
+# add_pepperoni = input("Do you want pepperoni? Y or N ")
+# extra_cheese = input("Do you want extra cheese? Y or N ")
+# # 🚨 Don't change the code above 👆
+#
+# #Write your code below this line 👇
+# bill = 0
+# if size == "S":
+#     bill = 15
+#     if add_pepperoni == "Y":
+#         bill += 2
+# elif size == "M":
+#     bill = 20
+#     if add_pepperoni == "Y":
+#         bill += 3
+# else:
+#     bill = 25
+#     if add_pepperoni == "Y":
+#         bill += 3
+#
+# if extra_cheese == "Y":
+#     bill += 1
+#
+# print(f"Your final bill is: ${bill}.")
+
+
+# 💪 This is a Difficult Challenge 💪
+# Instructions
+# You are going to write a program that tests the compatibility between two people.
+#
+# To work out the love score between two people:
+#
+# Take both people's names and check for the number of times the letters in the word TRUE occurs.
+#
+# Then check for the number of times the letters in the word LOVE occurs.
+#
+# Then combine these numbers to make a 2 digit number.
+#
+# For Love Scores less than 10 or greater than 90, the message should be:
+#
+# "Your score is **x**, you go together like coke and mentos."
+# For Love Scores between 40 and 50, the message should be:
+#
+# "Your score is **y**, you are alright together."
+# Otherwise, the message will just be their score. e.g.:
+#
+# "Your score is **z**."
+# e.g.
+#
+# name1 = "Angela Yu"
+# name2 = "Jack Bauer"
+# T occurs 0 times
+#
+# R occurs 1 time
+#
+# U occurs 2 times
+#
+# E occurs 2 times
+#
+# Total = 5
+#
+# L occurs 1 time
+#
+# O occurs 0 times
+#
+# V occurs 0 times
+#
+# E occurs 2 times
+#
+# Total = 3
+#
+# Love Score = 53
+#
+# Print: "Your score is 53."
+
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
 # 🚨 Don't change the code above 👆
 
-#Write your code below this line 👇
-bill = 0
-if size == "S":
-    bill = 15
-    if add_pepperoni == "Y":
-        bill += 2
-elif size == "M":
-    bill = 20
-    if add_pepperoni == "Y":
-        bill += 3
+# Write your code below this line 👇
+total1 = 0
+total2 = 0
+
+both_names = (name1 + name2).lower()
+
+total1 += both_names.count("t")
+total1 += both_names.count("r")
+total1 += both_names.count("u")
+total1 += both_names.count("e")
+
+total2 += both_names.count("l")
+total2 += both_names.count("o")
+total2 += both_names.count("v")
+total2 += both_names.count("e")
+
+total = int(str(total1) + str(total2))
+
+if total < 10 or total > 90:
+    print(f"Your score is {total}, you go together like coke and mentos.")
+elif 40 < total < 50:
+    print(f"Your score is {total}, you are alright together.")
 else:
-    bill = 25
-    if add_pepperoni == "Y":
-        bill += 3
-
-if extra_cheese == "Y":
-    bill += 1
-
-print(f"Your final bill is: ${bill}.")
+    print(f"Your score is {total}.")
