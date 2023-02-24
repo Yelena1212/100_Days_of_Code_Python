@@ -28,19 +28,19 @@ print("Your mission is to find the treasure.")
 
 #Write your code below this line 👇
 
-first_answer = input("You're at a cross road. Where do you want to go? Type 'left' or 'right'\n")
+first_answer = input("You're at a cross road. Where do you want to go? Type 'left' or 'right'\n").lower()
 if first_answer == "right":
-  print("Fall into a hole. Game Over.")
+  print("You have fall into a hole. Game Over.")
 else:
-  second_question = input("You come to a lake. There is an iland in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across.\n")
+  second_question = input("You come to a lake. There is an iland in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across.\n").lower()
   if second_question == "swim":
-    print("Attacked by trout. Game Over.")
+    print("You got attacked by and hungry trout. Game Over.")
   else:
-    third_question = input("You arrived at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which color do you choose?\n")
+    third_question = input("You arrived at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which color do you choose?\n").lower()
     if third_question == "red":
-      print("Burned by fire. Game Over.")
+      print("It is room full of fire. Game Over.")
     elif third_question == "blue":
-      print("Eatten by beasts. Game Over.")
+      print("You enter a room of beasts. Game Over.")
     elif third_question == "yellow":
       print("You win!")
     else:
