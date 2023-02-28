@@ -46,6 +46,11 @@ print(fruits)
 # average = round(sum / count)
 # print(average)
 
+
+
+# ______________________________________________________________________________________
+
+
 # Instructions
 # You are going to write a program that calculates the highest score from a List of scores.
 #
@@ -78,10 +83,8 @@ print(fruits)
 #
 # print(f"The highest score in the class is: {max}")
 
+# __________________________________________
 
-total = 0
-for number in range(1, 101):
-    total += number
 
 # Instructions
 # You are going to write a program that automatically prints the solution to the FizzBuzz game.
