@@ -31,20 +31,20 @@ print(fruits)
 # 171
 
 # 🚨 Don't change the code below 👇
-student_heights = input("Input a list of student heights ").split()
-for n in range(0, len(student_heights)):
-  student_heights[n] = int(student_heights[n])
-# 🚨 Don't change the code above 👆
-
-#Write your code below this row 👇
-sum = 0
-count = 0;
-for height in student_heights:
-    sum += height
-    count += 1
-print(sum)
-average = round(sum / count)
-print(average)
+# student_heights = input("Input a list of student heights ").split()
+# for n in range(0, len(student_heights)):
+#   student_heights[n] = int(student_heights[n])
+# # 🚨 Don't change the code above 👆
+#
+# #Write your code below this row 👇
+# sum = 0
+# count = 0;
+# for height in student_heights:
+#     sum += height
+#     count += 1
+# print(sum)
+# average = round(sum / count)
+# print(average)
 
 # Instructions
 # You are going to write a program that calculates the highest score from a List of scores.
@@ -63,20 +63,68 @@ print(average)
 # The highest score in the class is: 91
 
 # 🚨 Don't change the code below 👇
-student_scores = input("Input a list of student scores ").split()
-for n in range(0, len(student_scores)):
-  student_scores[n] = int(student_scores[n])
-print(student_scores)
-# 🚨 Don't change the code above 👆
+# student_scores = input("Input a list of student scores ").split()
+# for n in range(0, len(student_scores)):
+#   student_scores[n] = int(student_scores[n])
+# print(student_scores)
+# # 🚨 Don't change the code above 👆
+#
+# #Write your code below this row 👇
+#
+# max = student_scores[0]
+# for m in student_scores:
+#     if m > max:
+#         max = m
+#
+# print(f"The highest score in the class is: {max}")
+
+
+total = 0
+for number in range(1, 101):
+    total += number
+
+# Instructions
+# You are going to write a program that automatically prints the solution to the FizzBuzz game.
+#
+# Your program should print each number from 1 to 100 in turn.
+#
+# When the number is divisible by 3 then instead of printing the number it should print "Fizz".
+#
+# When the number is divisible by 5, then instead of printing the number it should print "Buzz".`
+#
+#   And if the number is divisible by both 3 and 5 e.g. 15 then instead of the number it should print "FizzBuzz"
+#
+# e.g. it might start off like this:
+#
+# 1
+# 2
+# Fizz
+# 4
+# Buzz
+# Fizz
+# 7
+# 8
+# Fizz
+# Buzz
+# 11
+# Fizz
+# 13
+# 14
+# FizzBuzz
+# .... etc.
+#
+# Hint
+# Remember your answer should start from 1 and go up to and including 100.
+# 2. Each number/text should be printed on a separate line.
 
 #Write your code below this row 👇
 
-max = student_scores[0]
-for m in student_scores:
-    if m > max:
-        max = m
-
-print(f"The highest score in the class is: {max}")
-
-
-
+for num in range(1, 101):
+    if num % 3 == 0 and num % 5 == 0:
+        print("FizzBuzz")
+    elif num % 3 == 0:
+        print("Fizz")
+    elif num % 5 == 0:
+        print("Buzz")
+    else:
+        print(num)
